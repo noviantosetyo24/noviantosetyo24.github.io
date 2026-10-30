@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="id" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +23,14 @@
               '"Segoe UI Symbol"',
               '"Noto Color Emoji"'
             ]
+          },
+          colors: {
+            dark: {
+              base: '#090d16',
+              surface: '#0f172a',
+              card: '#131d35',
+              border: '#1e293b'
+            }
           }
         }
       }
@@ -36,49 +44,49 @@
       scroll-behavior: smooth;
     }
 
-    /* Ambient Subtle Mesh Background Glows */
+    /* Ambient Subtle Mesh Background Glows on Dark */
     .ambient-glow-1 {
       position: absolute;
-      top: -120px;
-      right: -100px;
-      width: 550px;
-      height: 550px;
-      background: radial-gradient(circle, rgba(191, 219, 254, 0.45) 0%, rgba(224, 231, 255, 0.2) 50%, transparent 75%);
-      filter: blur(60px);
+      top: -100px;
+      right: -80px;
+      width: 580px;
+      height: 580px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(99, 102, 241, 0.08) 50%, transparent 75%);
+      filter: blur(80px);
       pointer-events: none;
       z-index: 0;
     }
 
     .ambient-glow-2 {
       position: absolute;
-      top: 40%;
-      left: -150px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(224, 231, 255, 0.4) 0%, rgba(243, 232, 255, 0.25) 50%, transparent 75%);
-      filter: blur(70px);
+      top: 38%;
+      left: -140px;
+      width: 620px;
+      height: 620px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.14) 0%, rgba(139, 92, 246, 0.06) 50%, transparent 75%);
+      filter: blur(90px);
       pointer-events: none;
       z-index: 0;
     }
 
     .ambient-glow-3 {
       position: absolute;
-      bottom: 5%;
-      right: -120px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(209, 250, 229, 0.35) 0%, rgba(224, 242, 254, 0.2) 50%, transparent 75%);
-      filter: blur(60px);
+      bottom: 8%;
+      right: -100px;
+      width: 540px;
+      height: 540px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(14, 165, 233, 0.06) 50%, transparent 75%);
+      filter: blur(80px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Modern Card Spotlight Glow */
+    /* Modern Dark Spotlight Glow */
     .spotlight-card {
       position: relative;
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       overflow: hidden;
     }
     .spotlight-card::before {
@@ -86,9 +94,9 @@
       position: absolute;
       top: var(--mouse-y, -250px);
       left: var(--mouse-x, -250px);
-      width: 360px;
-      height: 360px;
-      background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 70%);
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(96, 165, 250, 0.14) 0%, rgba(99, 102, 241, 0.04) 50%, transparent 70%);
       transform: translate(-50%, -50%);
       pointer-events: none;
       opacity: 0;
@@ -119,23 +127,23 @@
       scrollbar-width: none;
     }
 
-    /* Custom scrollbar */
+    /* Custom dark scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #f1f5f9;
+      background: #090d16;
     }
     ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
+      background: #1e293b;
       border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
+      background: #334155;
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-slate-50 via-slate-50/90 to-indigo-50/20 text-slate-700 min-h-screen selection:bg-blue-100 relative overflow-x-hidden">
+<body class="bg-[#090d16] text-slate-300 min-h-screen selection:bg-blue-900/60 selection:text-blue-200 relative overflow-x-hidden">
 
   <!-- Ambient Color Gradients -->
   <div class="ambient-glow-1"></div>
@@ -143,11 +151,11 @@
   <div class="ambient-glow-3"></div>
 
   <!-- Interactive Canvas Background (Constellation animation) -->
-  <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-35"></canvas>
+  <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-45"></canvas>
 
   <!-- Toast Notification -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-900 text-slate-100 text-sm shadow-lg border border-slate-700">
+    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-900 text-slate-200 text-sm shadow-xl border border-slate-700/80">
       <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
       </svg>
@@ -157,17 +165,17 @@
 
   <!-- Floating Header / Navbar -->
   <header class="fixed top-4 inset-x-0 z-40 max-w-2xl mx-auto px-4">
-    <nav class="flex items-center justify-between px-5 h-12 rounded-full bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-sm shadow-slate-200/40">
-      <a href="#" class="text-sm font-medium text-slate-800 hover:text-blue-600 transition flex items-center gap-2">
+    <nav class="flex items-center justify-between px-5 h-12 rounded-full bg-slate-900/75 backdrop-blur-md border border-slate-800/80 shadow-lg shadow-black/20">
+      <a href="#" class="text-sm font-medium text-slate-200 hover:text-blue-400 transition flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
         <span>noviantosetyo</span>
       </a>
 
-      <div class="flex items-center gap-1 sm:gap-2 text-xs text-slate-500">
-        <a href="#about" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Tentang</a>
-        <a href="#projects" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Proyek</a>
-        <a href="#skills" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Keahlian</a>
-        <a href="#contact" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Kontak</a>
+      <div class="flex items-center gap-1 sm:gap-2 text-xs text-slate-400">
+        <a href="#about" class="px-3 py-1.5 rounded-full hover:text-slate-200 hover:bg-slate-800/70 transition">Tentang</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-full hover:text-slate-200 hover:bg-slate-800/70 transition">Proyek</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-full hover:text-slate-200 hover:bg-slate-800/70 transition">Keahlian</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-full hover:text-slate-200 hover:bg-slate-800/70 transition">Kontak</a>
       </div>
     </nav>
   </header>
@@ -176,7 +184,7 @@
 
     <!-- Hero Section -->
     <section id="about" class="space-y-8 pt-4">
-      <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs bg-white/90 backdrop-blur-sm border border-slate-200/90 shadow-sm text-slate-600">
+      <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs bg-slate-900/80 backdrop-blur-sm border border-slate-800 shadow-sm text-slate-300">
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -185,32 +193,32 @@
       </div>
 
       <div class="space-y-4">
-        <h1 class="reveal-item text-3xl sm:text-5xl font-normal tracking-tight text-slate-900 leading-tight">
+        <h1 class="reveal-item text-3xl sm:text-5xl font-normal tracking-tight text-slate-100 leading-tight">
           Novianto Setyo Nugroho
         </h1>
 
-        <div class="reveal-item flex items-center gap-2 text-lg sm:text-xl text-slate-500 font-normal">
+        <div class="reveal-item flex items-center gap-2 text-lg sm:text-xl text-slate-400 font-normal">
           <span>Pengembang spesialis</span>
-          <span id="typewriter" class="text-slate-800 font-medium border-b border-blue-400 pb-0.5 min-h-[1.5em] inline-block"></span>
+          <span id="typewriter" class="text-blue-400 font-normal border-b border-blue-500/50 pb-0.5 min-h-[1.5em] inline-block"></span>
         </div>
 
-        <p class="reveal-item text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl pt-2">
+        <p class="reveal-item text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl pt-2">
           Berpengalaman merancang dan mengimplementasikan sistem informasi skala enterprise, mulai dari platform layanan kesehatan (*HealthTech SaaS*), sistem pelayanan publik pintar, otomasi antrean & tiket, hingga arsitektur agen AI terintegrasi.
         </p>
       </div>
 
       <div class="reveal-item flex flex-wrap items-center gap-3 pt-2">
-        <a href="#projects" class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-100 text-sm hover:bg-slate-700 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0">
+        <a href="#projects" class="px-5 py-2.5 rounded-xl bg-blue-600/90 text-white text-sm hover:bg-blue-600 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0">
           Lihat Studi Kasus & Proyek
         </a>
-        <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border border-slate-200/90 text-slate-700 text-sm hover:bg-slate-100/80 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
-          <svg class="w-4 h-4 text-slate-700" fill="currentColor" viewBox="0 0 24 24">
+        <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-900/80 backdrop-blur-sm border border-slate-800 text-slate-300 text-sm hover:bg-slate-800/80 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
+          <svg class="w-4 h-4 text-slate-300" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
           github.com/noviantosetyo24
         </a>
-        <button onclick="copyContactEmail('noviantosetyo24@gmail.com')" class="px-4 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border border-slate-200/90 text-slate-700 text-sm hover:bg-slate-100/80 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
-          <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button onclick="copyContactEmail('noviantosetyo24@gmail.com')" class="px-4 py-2.5 rounded-xl bg-slate-900/80 backdrop-blur-sm border border-slate-800 text-slate-300 text-sm hover:bg-slate-800/80 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
+          <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
           </svg>
           Salin Email
@@ -218,58 +226,58 @@
       </div>
 
       <!-- Quick Metrics Counters -->
-      <div class="reveal-item grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-200/70">
-        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/80 backdrop-blur-sm shadow-sm">
-          <div class="text-2xl font-light text-slate-800 flex items-center">
+      <div class="reveal-item grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-800/80">
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm shadow-sm">
+          <div class="text-2xl font-light text-slate-100 flex items-center">
             <span class="counter" data-target="30">0</span>+
           </div>
-          <div class="text-xs text-slate-500 pt-0.5">Sistem & Aplikasi Dibangun</div>
+          <div class="text-xs text-slate-400 pt-0.5">Sistem & Aplikasi Dibangun</div>
         </div>
-        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/80 backdrop-blur-sm shadow-sm">
-          <div class="text-2xl font-light text-slate-800 flex items-center">
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm shadow-sm">
+          <div class="text-2xl font-light text-slate-100 flex items-center">
             <span class="counter" data-target="15">0</span>+
           </div>
-          <div class="text-xs text-slate-500 pt-0.5">Solusi Layanan Medis / SIM</div>
+          <div class="text-xs text-slate-400 pt-0.5">Solusi Layanan Medis / SIM</div>
         </div>
-        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/80 backdrop-blur-sm shadow-sm">
-          <div class="text-2xl font-light text-slate-800 flex items-center">
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm shadow-sm">
+          <div class="text-2xl font-light text-slate-100 flex items-center">
             <span class="counter" data-target="100">0</span>%
           </div>
-          <div class="text-xs text-slate-500 pt-0.5">Fokus Keamanan & Integritas Data</div>
+          <div class="text-xs text-slate-400 pt-0.5">Fokus Keamanan & Data</div>
         </div>
-        <div class="p-4 rounded-xl bg-white/80 border border-slate-200/80 backdrop-blur-sm shadow-sm">
-          <div class="text-2xl font-light text-slate-800 flex items-center">
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm shadow-sm">
+          <div class="text-2xl font-light text-slate-100 flex items-center">
             <span class="counter" data-target="99">0</span>.9%
           </div>
-          <div class="text-xs text-slate-500 pt-0.5">Uptime & Performa Server</div>
+          <div class="text-xs text-slate-400 pt-0.5">Uptime & Performa Server</div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section with Fully Responsive Tabs -->
+    <!-- Projects Section with Responsive Tabs -->
     <section id="projects" class="space-y-6">
       <div class="reveal-item space-y-4">
         <div class="space-y-1">
-          <h2 class="text-xl font-normal text-slate-800 tracking-tight">Karya & Solusi Rekayasa Perangkat Lunak</h2>
-          <p class="text-sm text-slate-500">Representasi portofolio berdasarkan proyek dan sistem nyata yang pernah dibangun.</p>
+          <h2 class="text-xl font-normal text-slate-100 tracking-tight">Karya & Solusi Rekayasa Perangkat Lunak</h2>
+          <p class="text-sm text-slate-400">Representasi portofolio berdasarkan proyek dan sistem nyata yang pernah dibangun.</p>
         </div>
 
-        <!-- Fully Responsive Filter Tabs (Touch scroll on mobile + wrapped cleanly on desktop) -->
+        <!-- Fully Responsive Filter Tabs -->
         <div class="w-full overflow-x-auto no-scrollbar py-1">
-          <div class="inline-flex sm:flex sm:flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-slate-200/50 border border-slate-200/60 backdrop-blur-sm text-xs min-w-full sm:min-w-0">
-            <button onclick="filterProjects('all', this)" class="filter-btn active flex-shrink-0 px-3.5 py-2 rounded-xl bg-white text-slate-800 font-medium shadow-sm transition-all duration-200">
+          <div class="inline-flex sm:flex sm:flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-sm text-xs min-w-full sm:min-w-0">
+            <button onclick="filterProjects('all', this)" class="filter-btn active flex-shrink-0 px-3.5 py-2 rounded-xl bg-slate-800 text-slate-100 font-medium border border-slate-700/80 shadow-sm transition-all duration-200">
               Semua Proyek
             </button>
-            <button onclick="filterProjects('health', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all duration-200">
+            <button onclick="filterProjects('health', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition-all duration-200">
               HealthTech & SIM
             </button>
-            <button onclick="filterProjects('public', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all duration-200">
+            <button onclick="filterProjects('public', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition-all duration-200">
               Pelayanan Publik
             </button>
-            <button onclick="filterProjects('ai', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all duration-200">
+            <button onclick="filterProjects('ai', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition-all duration-200">
               AI & Otomasi
             </button>
-            <button onclick="filterProjects('tools', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-white/60 transition-all duration-200">
+            <button onclick="filterProjects('tools', this)" class="filter-btn flex-shrink-0 px-3.5 py-2 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 transition-all duration-200">
               Platform & Tools
             </button>
           </div>
@@ -280,17 +288,17 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="projects-grid">
 
         <!-- 1. Hospital & Clinic Management System (HealthTech) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-blue-100/80 shadow-sm transition-all duration-300 hover:border-blue-200 flex flex-col justify-between" data-category="health">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-blue-900/40 shadow-sm transition-all duration-300 hover:border-blue-700/60 flex flex-col justify-between" data-category="health">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-blue-50/90 text-blue-600 border border-blue-200/60">HealthTech SaaS</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
+              <span class="px-2.5 py-1 rounded-full bg-blue-950/70 text-blue-300 border border-blue-800/60">HealthTech SaaS</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Enterprise
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Hospital & Clinical Information System</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Hospital & Clinical Information System</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Sistem terpadu manajemen fasilitas kesehatan (Rumah Sakit & Jaringan Klinik). Mencakup rekam medis elektronik (RME), alur rawat jalan/inap, billing terpadu, dan manajemen dokter antar departemen.
               </p>
             </div>
@@ -298,30 +306,30 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">PHP / Laravel</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">MySQL</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">REST API</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Tailwind CSS</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">PHP / Laravel</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">MySQL</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">REST API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Tailwind CSS</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
               <span>Modul: Pendaftaran, RME, Kasir, Lab</span>
-              <span class="text-slate-400">Multi-tenant</span>
+              <span class="text-slate-500">Multi-tenant</span>
             </div>
           </div>
         </article>
 
         <!-- 2. Clinical Diagnostic Grouping & Claims Engine (HealthTech) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-emerald-100/80 shadow-sm transition-all duration-300 hover:border-emerald-200 flex flex-col justify-between" data-category="health">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-emerald-900/40 shadow-sm transition-all duration-300 hover:border-emerald-700/60 flex flex-col justify-between" data-category="health">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-emerald-50/90 text-emerald-600 border border-emerald-200/60">Claims Integration</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-950/70 text-emerald-300 border border-emerald-800/60">Claims Integration</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Core Engine
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Diagnostic Grouping & Insurance Claims Engine</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Diagnostic Grouping & Insurance Claims Engine</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Mesin kalkulasi dan grouping diagnosis klinis untuk standarisasi klaim jaminan kesehatan. Memverifikasi validitas data rekam medis pasien sebelum proses integrasi berkas billing.
               </p>
             </div>
@@ -329,30 +337,30 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Backend API</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">JSON Protocol</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Database Optimization</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Encryption</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Backend API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">JSON Protocol</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">DB Optimization</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Encryption</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
               <span>Validasi Kode ICD-10 & ICD-9 CM</span>
-              <span class="text-slate-400">High Precision</span>
+              <span class="text-slate-500">High Precision</span>
             </div>
           </div>
         </article>
 
         <!-- 3. Pharmacy & Pharmaceutical Logistics (HealthTech) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-teal-100/80 shadow-sm transition-all duration-300 hover:border-teal-200 flex flex-col justify-between" data-category="health">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-teal-900/40 shadow-sm transition-all duration-300 hover:border-teal-700/60 flex flex-col justify-between" data-category="health">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-teal-50/90 text-teal-600 border border-teal-200/60">Supply Chain</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
+              <span class="px-2.5 py-1 rounded-full bg-teal-950/70 text-teal-300 border border-teal-800/60">Supply Chain</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Logistics
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Pharmacy & Drug Warehouse Supply Chain</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Pharmacy & Drug Warehouse Supply Chain</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Manajemen inventaris obat dan perbekalan farmasi dengan pelacakan nomor batch, tanggal kedaluwarsa otomatis, sistem purchase order, serta integrasi resep elektronik dokter.
               </p>
             </div>
@@ -360,30 +368,30 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Fullstack Web</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Inventory Logic</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">FIFO / FEFO Tracking</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">POS Cashier</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Fullstack Web</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Inventory Logic</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">FIFO / FEFO</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">POS Cashier</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
               <span>Distribusi Farmasi & Gudang Pusat</span>
-              <span class="text-slate-400">Real-time Stock</span>
+              <span class="text-slate-500">Real-time Stock</span>
             </div>
           </div>
         </article>
 
         <!-- 4. Smart Public Administration & Citizen Portal (Public) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-amber-100/80 shadow-sm transition-all duration-300 hover:border-amber-200 flex flex-col justify-between" data-category="public">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-amber-900/40 shadow-sm transition-all duration-300 hover:border-amber-700/60 flex flex-col justify-between" data-category="public">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-amber-50/90 text-amber-700 border border-amber-200/60">Public Services</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
+              <span class="px-2.5 py-1 rounded-full bg-amber-950/70 text-amber-300 border border-amber-800/60">Public Services</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> GovTech
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Smart Community & Administration Portal</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Smart Community & Administration Portal</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Portal pelayanan publik multi-platform (backend, web, dan mobile) untuk administrasi surat warga, pendataan kependudukan, pengumuman digital, dan pemberdayaan pelaku usaha mikro lokal.
               </p>
             </div>
@@ -391,30 +399,30 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Backend API</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Web Dashboard</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Mobile API</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Role-Based Access</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Backend API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Web Dashboard</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Mobile API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">RBAC Security</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
               <span>Pelayanan Surat & Direktori UMKM</span>
-              <span class="text-slate-400">Citizen Centric</span>
+              <span class="text-slate-500">Citizen Centric</span>
             </div>
           </div>
         </article>
 
         <!-- 5. Queue & Digital Ticketing System (Public) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-indigo-100/80 shadow-sm transition-all duration-300 hover:border-indigo-200 flex flex-col justify-between" data-category="public">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-indigo-900/40 shadow-sm transition-all duration-300 hover:border-indigo-700/60 flex flex-col justify-between" data-category="public">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-indigo-50/90 text-indigo-600 border border-indigo-200/60">Queue & Reservation</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
+              <span class="px-2.5 py-1 rounded-full bg-indigo-950/70 text-indigo-300 border border-indigo-800/60">Queue & Reservation</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Real-time
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Digital Queue & Online Booking Engine</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Digital Queue & Online Booking Engine</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Platform antrean dan reservasi tiket online mandiri dengan pemanggilan suara otomatis (*audio synthesizer*), tampilan display loket dinamis, serta estimasi waktu tunggu pasien/pengunjung.
               </p>
             </div>
@@ -422,30 +430,29 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Socket / Polling</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Web Speech API</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Responsive Display</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Kiosk Mode</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Socket / Polling</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Web Speech API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Display Kiosk</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
               <span>Display Loket & Cetak Tiket</span>
-              <span class="text-slate-400">Zero Latency</span>
+              <span class="text-slate-500">Zero Latency</span>
             </div>
           </div>
         </article>
 
         <!-- 6. AI Automation, Market Analytics & Trading Agents (AI) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-purple-100/80 shadow-sm transition-all duration-300 hover:border-purple-200 flex flex-col justify-between" data-category="ai">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-purple-900/40 shadow-sm transition-all duration-300 hover:border-purple-700/60 flex flex-col justify-between" data-category="ai">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-purple-50/90 text-purple-600 border border-purple-200/60">AI & Multi-Agent</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
+              <span class="px-2.5 py-1 rounded-full bg-purple-950/70 text-purple-300 border border-purple-800/60">AI & Multi-Agent</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
                 <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Automation
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Financial Analytics & Multi-Agent Intelligence</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Financial Analytics & Multi-Agent Intelligence</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Eksplorasi agen otonom dan otomasi analitik pasar saham/finansial menggunakan LLM, pengambilan data pasar real-time, evaluasi indikator teknis, serta asisten generasi konten cerdas.
               </p>
             </div>
@@ -453,30 +460,30 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Python / Node.js</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">LLM Prompt Engine</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Data Streaming</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Next.js UI</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Python / Node.js</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">LLM Prompt Engine</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Data Streaming</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Next.js UI</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-              <span>Autonomous Agents & Market Insights</span>
-              <span class="text-slate-400">AI Research</span>
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
+              <span>Autonomous Agents & Insights</span>
+              <span class="text-slate-500">AI Research</span>
             </div>
           </div>
         </article>
 
         <!-- 7. Dynamic Form Builder & Generator (Tools) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-rose-100/80 shadow-sm transition-all duration-300 hover:border-rose-200 flex flex-col justify-between" data-category="tools">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-rose-900/40 shadow-sm transition-all duration-300 hover:border-rose-700/60 flex flex-col justify-between" data-category="tools">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-rose-50/90 text-rose-600 border border-rose-200/60">Low-Code Tooling</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
+              <span class="px-2.5 py-1 rounded-full bg-rose-950/70 text-rose-300 border border-rose-800/60">Low-Code Tooling</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
                 <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Developer Tool
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Dynamic Form Builder & Schema Engine</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Dynamic Form Builder & Schema Engine</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Tool berbasis web untuk membuat skema formulir kustom secara dinamis (*drag & drop/builder*), mendukung validasi bertingkat, kondisi bersyarat, serta penyimpanan input berbasis JSON terstruktur.
               </p>
             </div>
@@ -484,30 +491,30 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">JavaScript / DOM</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">JSON Schema</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">PHP Backend</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Tailwind CSS</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">JavaScript / DOM</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">JSON Schema</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">PHP Backend</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Tailwind CSS</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
               <span>Formulir Dinamis & Ekspor Skema</span>
-              <span class="text-slate-400">Modular Engine</span>
+              <span class="text-slate-500">Modular Engine</span>
             </div>
           </div>
         </article>
 
         <!-- 8. Enterprise Asset & Inventory Tracker (Tools) -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="tools">
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-800 shadow-sm transition-all duration-300 hover:border-slate-700 flex flex-col justify-between" data-category="tools">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">Asset Management</span>
-              <span class="inline-flex items-center gap-1 text-slate-500">
-                <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span> Operations
+              <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Asset Management</span>
+              <span class="inline-flex items-center gap-1 text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Operations
               </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Enterprise Fixed Asset & Inventory Tracker</h3>
-              <p class="text-sm text-slate-600 leading-relaxed">
+              <h3 class="text-base font-medium text-slate-100">Enterprise Fixed Asset & Inventory Tracker</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
                 Aplikasi pencatatan aset inventaris dan depresiasi nilai buku, pelacakan histori pemeliharaan, serta cetak barcode/QR tag untuk audit fisik berkala.
               </p>
             </div>
@@ -515,14 +522,14 @@
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Laravel</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">MySQL</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Barcode Generation</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100/90 text-slate-600">Reporting</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Laravel</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">MySQL</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Barcode Generation</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-800/80 text-slate-300">Reporting</span>
             </div>
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <div class="pt-2 border-t border-slate-800/70 flex items-center justify-between text-xs text-slate-400">
               <span>Depresiasi Aset & Audit Fisik</span>
-              <span class="text-slate-400">Audited Ready</span>
+              <span class="text-slate-500">Audited Ready</span>
             </div>
           </div>
         </article>
@@ -533,84 +540,84 @@
     <!-- Skills Section with Micro-interaction Tags -->
     <section id="skills" class="space-y-6">
       <div class="reveal-item space-y-1">
-        <h2 class="text-xl font-normal text-slate-800 tracking-tight">Keahlian & Ekosistem Teknologi</h2>
-        <p class="text-sm text-slate-500">Alat, bahasa, dan framework yang terbiasa saya gunakan dalam membangun sistem.</p>
+        <h2 class="text-xl font-normal text-slate-100 tracking-tight">Keahlian & Ekosistem Teknologi</h2>
+        <p class="text-sm text-slate-400">Alat, bahasa, dan framework yang terbiasa saya gunakan dalam membangun sistem.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
         <!-- Backend & Architecture -->
-        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-blue-100/80 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-blue-900/40 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-blue-950/80 text-blue-400 flex items-center justify-center border border-blue-800/60">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
           </div>
-          <h4 class="text-sm font-medium text-slate-800">Backend & Architecture</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
+          <h4 class="text-sm font-medium text-slate-200">Backend & Architecture</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
             Membangun REST API andal, autentikasi terproteksi, manajemen antrean, dan optimasi query data.
           </p>
           <div class="flex flex-wrap gap-1.5 pt-2">
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">PHP / Laravel</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Node.js / Express</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Python</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">RESTful API</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Microservices</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-blue-950/80 hover:text-blue-300 transition cursor-default">PHP / Laravel</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-blue-950/80 hover:text-blue-300 transition cursor-default">Node.js / Express</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-blue-950/80 hover:text-blue-300 transition cursor-default">Python</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-blue-950/80 hover:text-blue-300 transition cursor-default">RESTful API</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-blue-950/80 hover:text-blue-300 transition cursor-default">Microservices</span>
           </div>
         </div>
 
         <!-- Database & Performance -->
-        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-emerald-100/80 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-emerald-900/40 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-950/80 text-emerald-400 flex items-center justify-center border border-emerald-800/60">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7M4 7c0-2 1.5-3 3.5-3h9c2 0 3.5 1 3.5 3M4 7s0 5 8 5 8-5 8-5"></path></svg>
           </div>
-          <h4 class="text-sm font-medium text-slate-800">Database & Data Integrity</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
+          <h4 class="text-sm font-medium text-slate-200">Database & Data Integrity</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
             Skema relasional yang terstruktur, pemrosesan transaksi ACID, dan integritas data medis & finansial.
           </p>
           <div class="flex flex-wrap gap-1.5 pt-2">
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">MySQL / MariaDB</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">PostgreSQL</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">Indexing & Query Tuning</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">JSON Data Modeling</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-emerald-950/80 hover:text-emerald-300 transition cursor-default">MySQL / MariaDB</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-emerald-950/80 hover:text-emerald-300 transition cursor-default">PostgreSQL</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-emerald-950/80 hover:text-emerald-300 transition cursor-default">Query Tuning</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-emerald-950/80 hover:text-emerald-300 transition cursor-default">JSON Data Modeling</span>
           </div>
         </div>
 
         <!-- Frontend, DevOps & Tools -->
-        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-purple-100/80 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-purple-900/40 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-purple-950/80 text-purple-400 flex items-center justify-center border border-purple-800/60">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
           </div>
-          <h4 class="text-sm font-medium text-slate-800">Frontend, UI & Tools</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
+          <h4 class="text-sm font-medium text-slate-200">Frontend, UI & Tools</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
             Pengembangan tampilan fungsional yang responsif, rapi, dan cepat diakses di semua ukuran layar.
           </p>
           <div class="flex flex-wrap gap-1.5 pt-2">
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Tailwind CSS</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">JavaScript ES6+</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Git & Versioning</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Docker Basics</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100/90 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Linux / Laragon</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-purple-950/80 hover:text-purple-300 transition cursor-default">Tailwind CSS</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-purple-950/80 hover:text-purple-300 transition cursor-default">JavaScript ES6+</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-purple-950/80 hover:text-purple-300 transition cursor-default">Git & Versioning</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-purple-950/80 hover:text-purple-300 transition cursor-default">Docker Basics</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-800/80 text-slate-300 hover:bg-purple-950/80 hover:text-purple-300 transition cursor-default">Linux / Laragon</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Interactive Contact Section -->
-    <section id="contact" class="spotlight-card reveal-item p-8 sm:p-10 rounded-3xl border border-slate-200/90 shadow-sm space-y-6">
+    <section id="contact" class="spotlight-card reveal-item p-8 sm:p-10 rounded-3xl border border-slate-800/90 shadow-lg space-y-6">
       <div class="space-y-2 text-center sm:text-left">
-        <h3 class="text-xl font-medium text-slate-800">Tertarik Berdiskusi Lebih Lanjut?</h3>
-        <p class="text-sm text-slate-500 max-w-xl">
+        <h3 class="text-xl font-medium text-slate-100">Tertarik Berdiskusi Lebih Lanjut?</h3>
+        <p class="text-sm text-slate-400 max-w-xl">
           Terbuka untuk konsultasi teknis, pengembangan sistem skala besar, atau peluang kolaborasi profesional.
         </p>
       </div>
 
       <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-2">
-        <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-100 text-sm hover:bg-slate-700 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
+        <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-blue-600/90 text-white text-sm hover:bg-blue-600 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
           Profil GitHub
         </a>
-        <button onclick="copyContactEmail('noviantosetyo24@gmail.com')" class="px-5 py-2.5 rounded-xl bg-white/90 backdrop-blur-sm border border-slate-200/90 text-slate-700 text-sm hover:bg-slate-100/80 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
-          <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button onclick="copyContactEmail('noviantosetyo24@gmail.com')" class="px-5 py-2.5 rounded-xl bg-slate-900/80 backdrop-blur-sm border border-slate-800 text-slate-300 text-sm hover:bg-slate-800/80 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
+          <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>
           Salin Email
@@ -621,10 +628,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative z-10 border-t border-slate-200/70 py-10 text-center text-xs text-slate-400">
+  <footer class="relative z-10 border-t border-slate-800/80 py-10 text-center text-xs text-slate-500">
     <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p>&copy; 2026 Novianto Setyo Nugroho &bull; Software Engineer</p>
-      <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-1.5 text-slate-500 hover:text-slate-800 transition">
+      <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-1.5 text-slate-400 hover:text-slate-200 transition">
         <span>Kembali ke atas</span>
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
       </button>
@@ -730,15 +737,14 @@
       const buttons = document.querySelectorAll('.filter-btn');
 
       buttons.forEach(btn => {
-        btn.classList.remove('active', 'bg-white', 'text-slate-800', 'shadow-sm', 'font-medium');
-        btn.classList.add('text-slate-600');
+        btn.classList.remove('active', 'bg-slate-800', 'text-slate-100', 'shadow-sm', 'font-medium', 'border-slate-700/80');
+        btn.classList.add('text-slate-400', 'border-transparent');
       });
 
       if (btnElement) {
-        btnElement.classList.add('active', 'bg-white', 'text-slate-800', 'shadow-sm', 'font-medium');
-        btnElement.classList.remove('text-slate-600');
+        btnElement.classList.add('active', 'bg-slate-800', 'text-slate-100', 'shadow-sm', 'font-medium', 'border-slate-700/80');
+        btnElement.classList.remove('text-slate-400', 'border-transparent');
 
-        // Smooth scroll tab into view on small screens if overflowing
         btnElement.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
       }
 
@@ -775,7 +781,7 @@
       });
     }
 
-    // 7. Interactive Background Canvas (Ambient Interactive Constellation)
+    // 7. Interactive Background Canvas (Ambient Interactive Constellation for Dark Theme)
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     let width, height;
@@ -805,12 +811,12 @@
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#94a3b8';
+        ctx.fillStyle = '#64748b';
         ctx.fill();
       }
     }
 
-    const particleCount = Math.min(38, Math.floor(window.innerWidth / 32));
+    const particleCount = Math.min(42, Math.floor(window.innerWidth / 30));
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
@@ -834,11 +840,11 @@
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 110) {
+          if (dist < 115) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(148, 163, 184, ${0.16 * (1 - dist / 110)})`;
+            ctx.strokeStyle = `rgba(100, 116, 139, ${0.25 * (1 - dist / 115)})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
@@ -848,12 +854,12 @@
           const dx = particles[i].x - mouse.x;
           const dy = particles[i].y - mouse.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 130) {
+          if (dist < 140) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.25 * (1 - dist / 130)})`;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(96, 165, 250, ${0.45 * (1 - dist / 140)})`;
+            ctx.lineWidth = 1.1;
             ctx.stroke();
           }
         }
