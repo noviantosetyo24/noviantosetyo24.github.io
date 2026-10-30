@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Novianto Setyo Nugroho — Software Developer Portfolio</title>
-  <meta name="description" content="Portofolio Software Developer Novianto Setyo Nugroho. Fullstack & Backend Engineer.">
+  <title>Novianto Setyo Nugroho — Software Engineer Portfolio</title>
+  <meta name="description" content="Portofolio Software Engineer Novianto Setyo Nugroho. Spesialisasi pada Enterprise Healthtech, Smart Public Services, dan Sistem Otomasi Berkinerja Tinggi.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,29 +23,6 @@
               '"Segoe UI Symbol"',
               '"Noto Color Emoji"'
             ]
-          },
-          colors: {
-            surface: {
-              50: '#f8fafc',
-              100: '#f1f5f9',
-              200: '#e2e8f0',
-              800: '#1e293b',
-              900: '#0f172a'
-            }
-          },
-          animation: {
-            'float-slow': 'float 6s ease-in-out infinite',
-            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite'
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-8px)' }
-            },
-            pulseSubtle: {
-              '0%, 100%': { opacity: '0.4' },
-              '50%': { opacity: '0.8' }
-            }
           }
         }
       }
@@ -68,10 +45,10 @@
     .spotlight-card::before {
       content: '';
       position: absolute;
-      top: var(--mouse-y, -200px);
-      left: var(--mouse-x, -200px);
-      width: 320px;
-      height: 320px;
+      top: var(--mouse-y, -250px);
+      left: var(--mouse-x, -250px);
+      width: 360px;
+      height: 360px;
       background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 70%);
       transform: translate(-50%, -50%);
       pointer-events: none;
@@ -86,7 +63,7 @@
     /* Scroll reveal transitions */
     .reveal-item {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translateY(22px);
       transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal-item.revealed {
@@ -112,10 +89,10 @@
 </head>
 <body class="bg-slate-50 text-slate-700 min-h-screen selection:bg-slate-200 relative overflow-x-hidden">
 
-  <!-- Interactive Canvas Background (Subtle animated node constellation) -->
+  <!-- Interactive Canvas Background (Constellation animation) -->
   <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
 
-  <!-- Toast Notification for Copy Email -->
+  <!-- Toast Notification -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none">
     <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-900 text-slate-100 text-sm shadow-lg border border-slate-700">
       <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,10 +111,10 @@
       </a>
 
       <div class="flex items-center gap-1 sm:gap-2 text-xs text-slate-500">
-        <a href="#about" class="nav-link px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Tentang</a>
-        <a href="#projects" class="nav-link px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Proyek</a>
-        <a href="#skills" class="nav-link px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Keahlian</a>
-        <a href="#contact" class="nav-link px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Kontak</a>
+        <a href="#about" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Tentang</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Proyek</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Keahlian</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-full hover:text-slate-800 hover:bg-slate-100/80 transition">Kontak</a>
       </div>
     </nav>
   </header>
@@ -146,41 +123,38 @@
 
     <!-- Hero Section -->
     <section id="about" class="space-y-8 pt-4">
-      <!-- Status pill with glowing ping -->
       <div class="reveal-item inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs bg-white border border-slate-200/80 shadow-sm text-slate-600">
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        <span>Terbuka untuk kolaborasi & proyek baru</span>
+        <span>Terbuka untuk proyek enterprise & kolaborasi software</span>
       </div>
 
-      <!-- Main Heading & Dynamic Text -->
       <div class="space-y-4">
         <h1 class="reveal-item text-3xl sm:text-5xl font-normal tracking-tight text-slate-900 leading-tight">
           Novianto Setyo Nugroho
         </h1>
 
         <div class="reveal-item flex items-center gap-2 text-lg sm:text-xl text-slate-500 font-normal">
-          <span>Saya fokus sebagai</span>
+          <span>Pengembang spesialis</span>
           <span id="typewriter" class="text-slate-800 font-medium border-b border-blue-400 pb-0.5 min-h-[1.5em] inline-block"></span>
         </div>
 
         <p class="reveal-item text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl pt-2">
-          Membangun solusi perangkat lunak yang andal, scalable, dan efisien. Menyukai kode yang bersih, arsitektur backend yang kokoh, serta antarmuka web modern yang intuitif.
+          Berpengalaman merancang dan mengimplementasikan sistem informasi skala enterprise, mulai dari platform layanan kesehatan (*HealthTech SaaS*), sistem pelayanan publik pintar, otomasi antrean & tiket, hingga arsitektur agen AI terintegrasi.
         </p>
       </div>
 
-      <!-- Action Buttons -->
       <div class="reveal-item flex flex-wrap items-center gap-3 pt-2">
         <a href="#projects" class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-100 text-sm hover:bg-slate-700 shadow-sm transition transform hover:-translate-y-0.5 active:translate-y-0">
-          Eksplorasi Proyek
+          Lihat Studi Kasus & Proyek
         </a>
         <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-white border border-slate-200/90 text-slate-700 text-sm hover:bg-slate-100/70 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
           <svg class="w-4 h-4 text-slate-700" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
-          GitHub
+          github.com/noviantosetyo24
         </a>
         <button onclick="copyContactEmail('noviantosetyo24@gmail.com')" class="px-4 py-2.5 rounded-xl bg-white border border-slate-200/90 text-slate-700 text-sm hover:bg-slate-100/70 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
           <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -191,151 +165,299 @@
       </div>
 
       <!-- Quick Metrics Counters -->
-      <div class="reveal-item grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-200/70">
+      <div class="reveal-item grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-200/70">
+        <div class="p-4 rounded-xl bg-white/70 border border-slate-200/70 backdrop-blur-sm">
+          <div class="text-2xl font-light text-slate-800 flex items-center">
+            <span class="counter" data-target="30">0</span>+
+          </div>
+          <div class="text-xs text-slate-500 pt-0.5">Sistem & Aplikasi Dibangun</div>
+        </div>
+        <div class="p-4 rounded-xl bg-white/70 border border-slate-200/70 backdrop-blur-sm">
+          <div class="text-2xl font-light text-slate-800 flex items-center">
+            <span class="counter" data-target="15">0</span>+
+          </div>
+          <div class="text-xs text-slate-500 pt-0.5">Solusi Layanan Medis / SIM</div>
+        </div>
         <div class="p-4 rounded-xl bg-white/70 border border-slate-200/70 backdrop-blur-sm">
           <div class="text-2xl font-light text-slate-800 flex items-center">
             <span class="counter" data-target="100">0</span>%
           </div>
-          <div class="text-xs text-slate-500 pt-0.5">Komitmen Kualitas Kode</div>
+          <div class="text-xs text-slate-500 pt-0.5">Fokus Keamanan & Integritas Data</div>
         </div>
         <div class="p-4 rounded-xl bg-white/70 border border-slate-200/70 backdrop-blur-sm">
           <div class="text-2xl font-light text-slate-800 flex items-center">
-            <span class="counter" data-target="25">0</span>+
-          </div>
-          <div class="text-xs text-slate-500 pt-0.5">Repositori & Modul Web</div>
-        </div>
-        <div class="p-4 rounded-xl bg-white/70 border border-slate-200/70 backdrop-blur-sm col-span-2 sm:col-span-1">
-          <div class="text-2xl font-light text-slate-800 flex items-center">
             <span class="counter" data-target="99">0</span>.9%
           </div>
-          <div class="text-xs text-slate-500 pt-0.5">Target Efisiensi API</div>
+          <div class="text-xs text-slate-500 pt-0.5">Uptime & Performa Server</div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section with Filter Tabs & Spotlight Cards -->
+    <!-- Projects Section with Real Systems from Workspace -->
     <section id="projects" class="space-y-6">
       <div class="reveal-item flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div class="space-y-1">
-          <h2 class="text-xl font-normal text-slate-800 tracking-tight">Karya & Proyek Terpilih</h2>
-          <p class="text-sm text-slate-500">Aplikasi web fungsional yang dibangun dengan performa tinggi.</p>
+          <h2 class="text-xl font-normal text-slate-800 tracking-tight">Karya & Solusi Rekayasa Perangkat Lunak</h2>
+          <p class="text-sm text-slate-500">Representasi portofolio berdasarkan proyek dan sistem nyata yang pernah dibangun.</p>
         </div>
 
-        <!-- Interactive Filter Tabs -->
-        <div class="inline-flex p-1 rounded-xl bg-slate-200/60 text-xs">
-          <button onclick="filterProjects('all')" class="filter-btn active px-3 py-1.5 rounded-lg bg-white text-slate-800 shadow-sm transition">Semua</button>
-          <button onclick="filterProjects('web')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800 transition">Web App</button>
-          <button onclick="filterProjects('api')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800 transition">Backend API</button>
+        <!-- Filter Tabs -->
+        <div class="inline-flex p-1 rounded-xl bg-slate-200/60 text-xs overflow-x-auto max-w-full">
+          <button onclick="filterProjects('all')" class="filter-btn active px-3 py-1.5 rounded-lg bg-white text-slate-800 shadow-sm transition whitespace-nowrap">Semua</button>
+          <button onclick="filterProjects('health')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800 transition whitespace-nowrap">HealthTech & SIM</button>
+          <button onclick="filterProjects('public')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800 transition whitespace-nowrap">Pelayanan Publik</button>
+          <button onclick="filterProjects('ai')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800 transition whitespace-nowrap">AI & Otomasi</button>
+          <button onclick="filterProjects('tools')" class="filter-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-800 transition whitespace-nowrap">Platform & Tools</button>
         </div>
       </div>
 
       <!-- Project Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="projects-grid">
 
-        <!-- Card 1 -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="web">
+        <!-- 1. Hospital & Clinic Management System (HealthTech) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="health">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">Web App</span>
-              <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 inline-flex items-center gap-1 transition">
-                <span>Source</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </a>
+              <span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-100">HealthTech SaaS</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Enterprise
+              </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Sistem Manajemen & Dashboard Data</h3>
+              <h3 class="text-base font-medium text-slate-800">Hospital & Clinical Information System</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Platform aplikasi web responsif untuk pengelolaan data terpusat, kontrol hak akses, serta visualisasi pelaporan real-time yang bersih.
+                Sistem terpadu manajemen fasilitas kesehatan (Rumah Sakit & Jaringan Klinik). Mencakup rekam medis elektronik (RME), alur rawat jalan/inap, billing terpadu, dan manajemen dokter antar departemen.
               </p>
             </div>
           </div>
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">PHP / Laravel</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">MySQL</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">REST API</span>
               <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Tailwind CSS</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">JavaScript</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">PHP</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Modul: Pendaftaran, RME, Kasir, Lab</span>
+              <span class="text-slate-400">Multi-tenant</span>
             </div>
           </div>
         </article>
 
-        <!-- Card 2 -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="api">
+        <!-- 2. Clinical Diagnostic Grouping & Claims Engine (HealthTech) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="health">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">Backend API</span>
-              <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 inline-flex items-center gap-1 transition">
-                <span>Source</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </a>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">Claims Integration</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Core Engine
+              </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">High-Performance RESTful API</h3>
+              <h3 class="text-base font-medium text-slate-800">Diagnostic Grouping & Insurance Claims Engine</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Layanan microservice dengan otentikasi token JWT, validasi skema payload ketat, dan efisiensi query basis data terindeks.
+                Mesin kalkulasi dan grouping diagnosis klinis untuk standarisasi klaim jaminan kesehatan. Memverifikasi validitas data rekam medis pasien sebelum proses integrasi berkas billing.
               </p>
             </div>
           </div>
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Node.js</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Express</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">SQL</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Backend API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">JSON Protocol</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Database Optimization</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Encryption</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Validasi Kode ICD-10 & ICD-9 CM</span>
+              <span class="text-slate-400">High Precision</span>
             </div>
           </div>
         </article>
 
-        <!-- Card 3 -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="web">
+        <!-- 3. Pharmacy & Pharmaceutical Logistics (HealthTech) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="health">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 border border-purple-100">Interactive UI</span>
-              <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 inline-flex items-center gap-1 transition">
-                <span>Source</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </a>
+              <span class="px-2.5 py-1 rounded-full bg-teal-50 text-teal-600 border border-teal-100">Supply Chain</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Logistics
+              </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Dynamic Client Portal</h3>
+              <h3 class="text-base font-medium text-slate-800">Pharmacy & Drug Warehouse Supply Chain</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Antarmuka modern terintegrasi dengan validasi form asinkron, transisi animasi halus, dan kompatibilitas lintas perangkat.
+                Manajemen inventaris obat dan perbekalan farmasi dengan pelacakan nomor batch, tanggal kedaluwarsa otomatis, sistem purchase order, serta integrasi resep elektronik dokter.
               </p>
             </div>
           </div>
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Fullstack Web</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Inventory Logic</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">FIFO / FEFO Tracking</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">POS Cashier</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Distribusi Farmasi & Gudang Pusat</span>
+              <span class="text-slate-400">Real-time Stock</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Smart Public Administration & Citizen Portal (Public) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="public">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-600 border border-amber-100">Public Services</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> GovTech
+              </span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-base font-medium text-slate-800">Smart Community & Administration Portal</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Portal pelayanan publik multi-platform (backend, web, dan mobile) untuk administrasi surat warga, pendataan kependudukan, pengumuman digital, dan pemberdayaan pelaku usaha mikro lokal.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 space-y-3">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Backend API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Web Dashboard</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Mobile API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Role-Based Access</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Pelayanan Surat & Direktori UMKM</span>
+              <span class="text-slate-400">Citizen Centric</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Queue & Digital Ticketing System (Public) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="public">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">Queue & Reservation</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Real-time
+              </span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-base font-medium text-slate-800">Digital Queue & Online Booking Engine</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Platform antrean dan reservasi tiket online mandiri dengan pemanggilan suara otomatis (*audio synthesizer*), tampilan display loket dinamis, serta estimasi waktu tunggu pasien/pengunjung.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 space-y-3">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Socket / Polling</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Web Speech API</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Responsive Display</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Kiosk Mode</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Display Loket & Cetak Tiket</span>
+              <span class="text-slate-400">Zero Latency</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. AI Automation, Market Analytics & Trading Agents (AI) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="ai">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-600 border border-purple-100">AI & Multi-Agent</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Automation
+              </span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-base font-medium text-slate-800">Financial Analytics & Multi-Agent Intelligence</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Eksplorasi agen otonom dan otomasi analitik pasar saham/finansial menggunakan LLM, pengambilan data pasar real-time, evaluasi indikator teknis, serta asisten generasi konten cerdas.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 space-y-3">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Python / Node.js</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">LLM Prompt Engine</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Data Streaming</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Next.js UI</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Autonomous Agents & Market Insights</span>
+              <span class="text-slate-400">AI Research</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Dynamic Form Builder & Generator (Tools) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="tools">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-600 border border-rose-100">Low-Code Tooling</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Developer Tool
+              </span>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-base font-medium text-slate-800">Dynamic Form Builder & Schema Engine</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Tool berbasis web untuk membuat skema formulir kustom secara dinamis (*drag & drop/builder*), mendukung validasi bertingkat, kondisi bersyarat, serta penyimpanan input berbasis JSON terstruktur.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-6 space-y-3">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">JavaScript / DOM</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">JSON Schema</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">PHP Backend</span>
               <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Tailwind CSS</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">DOM API</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">REST Client</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Formulir Dinamis & Ekspor Skema</span>
+              <span class="text-slate-400">Modular Engine</span>
             </div>
           </div>
         </article>
 
-        <!-- Card 4 -->
-        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="api">
+        <!-- 8. Enterprise Asset & Inventory Tracker (Tools) -->
+        <article class="project-item spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm transition-all duration-300 hover:border-slate-300 flex flex-col justify-between" data-category="tools">
           <div class="space-y-4">
             <div class="flex items-center justify-between text-xs text-slate-400">
-              <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">Tools / Utility</span>
-              <a href="https://github.com/noviantosetyo24" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-800 inline-flex items-center gap-1 transition">
-                <span>Source</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-              </a>
+              <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">Asset Management</span>
+              <span class="inline-flex items-center gap-1 text-slate-500">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span> Operations
+              </span>
             </div>
             <div class="space-y-2">
-              <h3 class="text-base font-medium text-slate-800">Automated Data Sync Service</h3>
+              <h3 class="text-base font-medium text-slate-800">Enterprise Fixed Asset & Inventory Tracker</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Cron worker otomatis untuk sinkronisasi rekaman berkala antar endpoint dengan pelaporan kesalahan terstruktur.
+                Aplikasi pencatatan aset inventaris dan depresiasi nilai buku, pelacakan histori pemeliharaan, serta cetak barcode/QR tag untuk audit fisik berkala.
               </p>
             </div>
           </div>
 
           <div class="pt-6 space-y-3">
             <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Node.js</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">JSON</span>
-              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Automation</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Laravel</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">MySQL</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Barcode Generation</span>
+              <span class="px-2.5 py-0.5 rounded-md text-xs bg-slate-100 text-slate-600">Reporting</span>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Depresiasi Aset & Audit Fisik</span>
+              <span class="text-slate-400">Audited Ready</span>
             </div>
           </div>
         </article>
@@ -347,58 +469,60 @@
     <section id="skills" class="space-y-6">
       <div class="reveal-item space-y-1">
         <h2 class="text-xl font-normal text-slate-800 tracking-tight">Keahlian & Ekosistem Teknologi</h2>
-        <p class="text-sm text-slate-500">Teknologi dan perkakas yang saya gunakan untuk mewujudkan solusi digital.</p>
+        <p class="text-sm text-slate-500">Alat, bahasa, dan framework yang terbiasa saya gunakan dalam membangun sistem.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <!-- Frontend -->
+        <!-- Backend & Architecture -->
         <div class="spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
           <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-          </div>
-          <h4 class="text-sm font-medium text-slate-800">Frontend Development</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">
-            Menekankan estetika bersih, performa loading kilat, dan kemudahan navigasi bagi pengguna.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-2">
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Tailwind CSS</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">JavaScript ES6+</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">HTML5 Semantic</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Responsive UI</span>
-          </div>
-        </div>
-
-        <!-- Backend -->
-        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
           </div>
-          <h4 class="text-sm font-medium text-slate-800">Backend & API Logic</h4>
+          <h4 class="text-sm font-medium text-slate-800">Backend & Architecture</h4>
           <p class="text-xs text-slate-500 leading-relaxed">
-            Membangun sistem logika server yang tangguh, terproteksi, serta pemrosesan data yang cepat.
+            Membangun REST API andal, autentikasi terproteksi, manajemen antrean, dan optimasi query data.
           </p>
           <div class="flex flex-wrap gap-1.5 pt-2">
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">Node.js</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">PHP</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">RESTful API</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">MySQL / SQL</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">PHP / Laravel</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Node.js / Express</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Python</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">RESTful API Design</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition cursor-default">Microservices</span>
           </div>
         </div>
 
-        <!-- Workflow -->
+        <!-- Database & Performance -->
         <div class="spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
-          <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7M4 7c0-2 1.5-3 3.5-3h9c2 0 3.5 1 3.5 3M4 7s0 5 8 5 8-5 8-5"></path></svg>
           </div>
-          <h4 class="text-sm font-medium text-slate-800">Workflow & Environments</h4>
+          <h4 class="text-sm font-medium text-slate-800">Database & Data Integrity</h4>
           <p class="text-xs text-slate-500 leading-relaxed">
-            Manajemen kode teratur dengan version control dan integrasi lingkungan kerja terstandardisasi.
+            Skema relasional yang terstruktur, pemrosesan transaksi ACID, dan integritas data medis & finansial.
           </p>
           <div class="flex flex-wrap gap-1.5 pt-2">
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 transition cursor-default">Git & GitHub</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 transition cursor-default">GitHub Pages</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 transition cursor-default">VS Code</span>
-            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 transition cursor-default">Laragon</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">MySQL / MariaDB</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">PostgreSQL</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">Indexing & Query Tuning</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition cursor-default">JSON Data Modeling</span>
+          </div>
+        </div>
+
+        <!-- Frontend, DevOps & Tools -->
+        <div class="spotlight-card reveal-item p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          </div>
+          <h4 class="text-sm font-medium text-slate-800">Frontend, UI & Tools</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Pengembangan tampilan fungsional yang responsif, rapi, dan cepat diakses di semua ukuran layar.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Tailwind CSS</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">JavaScript ES6+</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Git & Versioning</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Docker Basics</span>
+            <span class="skill-tag px-2.5 py-1 rounded-md text-xs bg-slate-100 text-slate-700 hover:bg-purple-50 hover:text-purple-600 transition cursor-default">Linux / Laragon</span>
           </div>
         </div>
       </div>
@@ -407,9 +531,9 @@
     <!-- Interactive Contact Section -->
     <section id="contact" class="spotlight-card reveal-item p-8 sm:p-10 rounded-3xl border border-slate-200/90 shadow-sm space-y-6">
       <div class="space-y-2 text-center sm:text-left">
-        <h3 class="text-xl font-medium text-slate-800">Mari Terhubung & Berkolaborasi</h3>
+        <h3 class="text-xl font-medium text-slate-800">Tertarik Berdiskusi Lebih Lanjut?</h3>
         <p class="text-sm text-slate-500 max-w-xl">
-          Punya ide proyek, tawaran pekerjaan, atau sekadar ingin bertukar wawasan seputar dunia pemrograman? Jangan ragu untuk menghubungi.
+          Terbuka untuk konsultasi teknis, pengembangan sistem skala besar, atau peluang kolaborasi profesional.
         </p>
       </div>
 
@@ -418,23 +542,23 @@
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
-          Kunjungi GitHub Profile
+          Profil GitHub
         </a>
         <button onclick="copyContactEmail('noviantosetyo24@gmail.com')" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200/90 text-slate-700 text-sm hover:bg-slate-100/70 shadow-sm transition flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0">
           <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
           </svg>
-          Salin Alamat Email
+          Salin Email
         </button>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer with Back-to-Top Button -->
+  <!-- Footer -->
   <footer class="relative z-10 border-t border-slate-200/70 py-10 text-center text-xs text-slate-400">
     <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>&copy; 2026 Novianto Setyo Nugroho &bull; Portofolio Programmer Modern</p>
+      <p>&copy; 2026 Novianto Setyo Nugroho &bull; Software Engineer</p>
       <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="inline-flex items-center gap-1.5 text-slate-500 hover:text-slate-800 transition">
         <span>Kembali ke atas</span>
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
@@ -443,15 +567,15 @@
   </footer>
 
   <!-- ========================================== -->
-  <!-- FULL JAVASCRIPT ANIMATIONS & INTERACTIONS -->
+  <!-- JAVASCRIPT ANIMATIONS & INTERACTIONS -->
   <!-- ========================================== -->
   <script>
     // 1. Dynamic Typewriter Animation
     const roles = [
-      "Software Developer",
-      "Fullstack Web Developer",
-      "Backend & REST API Builder",
-      "Clean Code Enthusiast"
+      "HealthTech & Enterprise Systems",
+      "Robust Backend & API Architecture",
+      "Smart Public Service Solutions",
+      "AI & Automation Workflows"
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -468,15 +592,15 @@
         charIndex++;
       }
 
-      let speed = isDeleting ? 40 : 80;
+      let speed = isDeleting ? 35 : 75;
 
       if (!isDeleting && charIndex === currentRole.length) {
-        speed = 1800; // pause at word end
+        speed = 2000;
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        speed = 400; // pause before next word
+        speed = 400;
       }
 
       setTimeout(typeWriter, speed);
@@ -502,7 +626,7 @@
         }
       });
     }, {
-      threshold: 0.12,
+      threshold: 0.1,
       rootMargin: "0px 0px -40px 0px"
     });
 
@@ -517,7 +641,7 @@
           document.querySelectorAll('.counter').forEach(counter => {
             const target = +counter.getAttribute('data-target');
             let count = 0;
-            const step = Math.ceil(target / 45);
+            const step = Math.ceil(target / 40);
             const timer = setInterval(() => {
               count += step;
               if (count >= target) {
@@ -545,9 +669,10 @@
         btn.classList.add('text-slate-600');
       });
 
-      // Find clicked button
-      event.target.classList.add('active', 'bg-white', 'text-slate-800', 'shadow-sm');
-      event.target.classList.remove('text-slate-600');
+      if (event && event.target) {
+        event.target.classList.add('active', 'bg-white', 'text-slate-800', 'shadow-sm');
+        event.target.classList.remove('text-slate-600');
+      }
 
       items.forEach(item => {
         if (category === 'all' || item.dataset.category === category) {
@@ -555,7 +680,7 @@
           setTimeout(() => {
             item.style.opacity = '1';
             item.style.transform = 'translateY(0) scale(1)';
-          }, 30);
+          }, 20);
         } else {
           item.style.opacity = '0';
           item.style.transform = 'translateY(12px) scale(0.98)';
@@ -599,8 +724,8 @@
       constructor() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.45;
-        this.vy = (Math.random() - 0.5) * 0.45;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
         this.radius = Math.random() * 1.5 + 0.8;
       }
       update() {
@@ -617,7 +742,7 @@
       }
     }
 
-    const particleCount = Math.min(40, Math.floor(window.innerWidth / 30));
+    const particleCount = Math.min(38, Math.floor(window.innerWidth / 32));
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
@@ -635,7 +760,6 @@
     function animateCanvas() {
       ctx.clearRect(0, 0, width, height);
 
-      // Connect particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -646,22 +770,21 @@
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(148, 163, 184, ${0.18 * (1 - dist / 110)})`;
+            ctx.strokeStyle = `rgba(148, 163, 184, ${0.16 * (1 - dist / 110)})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
         }
 
-        // Connection to mouse
         if (mouse.x !== null) {
           const dx = particles[i].x - mouse.x;
           const dy = particles[i].y - mouse.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 140) {
+          if (dist < 130) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.28 * (1 - dist / 140)})`;
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.25 * (1 - dist / 130)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
